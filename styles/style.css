@@ -59,7 +59,8 @@ html {
 
 /* Адрес */
 .address {
-  width: 240px;
+  width: 100%;
+  max-width: 240px;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -79,14 +80,14 @@ html {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background-color: rgba(0, 0, 0, .6);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* Обложка */
 .cover {
   position: relative;
   z-index: 1;
-  height: 757px;
+  min-height: 757px;
   background-image: url(./../images/cover.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -150,11 +151,12 @@ html {
 
 /* Кнопка */
 .bet-button {
-  width: 257px;
-  height: 52px;
+  min-width: 257px;
+  min-height: 52px;
   margin-left: 78px;
   border: 1px solid #fff;
   color: #fff;
+  font-family: Raleway, sans-serif;
   font-weight: 500;
   font-size: 22px;
   line-height: 25.83px;
@@ -179,9 +181,14 @@ html {
 
 .lots__card-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
   padding-bottom: 30px;
   list-style: none;
+}
+
+.lots__card-list-item {
+  flex: 1 0 334px;
 }
 
 /* Карточка */
@@ -192,10 +199,9 @@ html {
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
-  width: 334px;
-  height: 563px;
+  min-height: 563px;
   padding: 50px 39px 49px;
-  color:#fff;
+  color: #fff;
   background-position: center;
   background-size: cover;
 }
@@ -229,7 +235,7 @@ html {
 .card__text {
   font-weight: 400;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 23.9px;
 }
 
 /* Ссылка под карточками */
@@ -277,7 +283,8 @@ html {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  width: 693px;
+  width: 100%;
+  max-width: 693px;
 }
 
 .about__text-description {
@@ -326,15 +333,11 @@ html {
 }
 
 /* Ссылки на социальные сети */
-.footer__social {
-  display: flex;
-  justify-content: end;
-}
 
 .footer__social-list {
   display: flex;
-  justify-content: space-between;
-  width: 240px;
+  justify-content: flex-end;
+  gap: 48px;
 }
 
 .footer__social-list-item {
